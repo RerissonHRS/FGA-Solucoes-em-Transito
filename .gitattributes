@@ -1,0 +1,2 @@
+videos/*.mp4 filter=lfs diff=lfs merge=lfs -text
+videos/trafego.mp4 filter=lfs diff=lfs merge=lfs -text
