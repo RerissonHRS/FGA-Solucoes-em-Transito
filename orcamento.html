@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Orçamento — FGA</title>
+  <link rel="icon" href="favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Ícones Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">
+        <img src="img/fga.png" alt="FGA - Assessoria de Trânsito" />
+        <span class="logo-text">FGA - Assessoria de Trânsito</span>
+      </a>
+      <nav class="nav">
+        <a href="index.html">Início</a>
+        <a href="como-funciona.html">Como funciona</a>
+        <a href="orcamento.html" class="btn btn-sm btn-primary active">Orçamento</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="budget-hero">
+      <div class="container">
+        <h1>Orçamento</h1>
+        <p>Preencha o formulário abaixo solicitando seu orçamento.</p>
+      </div>
+    </section>
+
+    <section class="section section-orcamento">
+      <div class="container">
+        <div class="form-grid">
+          <!-- Formulário -->
+          <form class="form" action="#" method="post">
+            <h2>Solicite seu orçamento</h2>
+
+            <input type="text" name="nome" placeholder="Nome*" required>
+            <input type="text" name="sobrenome" placeholder="Sobrenome*" required>
+            <input type="tel" name="telefone" placeholder="Telefone*" required>
+            <textarea name="mensagem" rows="5" placeholder="Mensagem*" required></textarea>
+
+            <button type="submit" class="btn btn-primary">Enviar</button>
+          </form>
+
+          <!-- Aside de atendimento -->
+          <aside class="contact-aside">
+            <h3>Atendimento</h3>
+            <p>Maringá, PR — Brasil</p>
+            <p>Horário comercial. Retorno em até 1 dia útil.</p>
+
+            <ul class="list-check">
+              <li><i>📞</i> WhatsApp e telefone</li>
+              <li><i>📧</i> E-mail e presencial</li>
+              <li><i>📄</i> Documentação online</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a class="logo" href="index.html">
+          <img src="img/fga.png" alt="FGA - Assessoria de Trânsito" />
+          <span class="logo-text">FGA - Assessoria de Trânsito</span>
+        </a>
+        <p>©2025 FGA Assessoria de Trânsito — Advogado | OAB/PR 129.749</p>
+      </div>
+      <div class="footer-links">
+        <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+        <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+        <a href="orcamento.html" class="btn btn-sm btn-primary">Entre em contato</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>
