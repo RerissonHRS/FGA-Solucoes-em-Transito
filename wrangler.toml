@@ -1,5 +1,5 @@
-name = "fga-site"
+name = "fga-transito"
 compatibility_date = "2025-12-03"
 
 [site]
-bucket = "./"           # ou "dist", se você tiver uma pasta de build
+bucket = "./"
