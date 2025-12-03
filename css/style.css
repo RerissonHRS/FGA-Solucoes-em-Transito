@@ -47,7 +47,7 @@ body {
   color: var(--text, #EBEFF2);
   line-height: 1.6;
   margin: 0;
-  padding: 90px 0 0 0;
+  padding: 110px 0 0 0;
   /* espaço do header fixo */
 }
 
@@ -744,9 +744,21 @@ ul {
     width: 100%;
     background: var(--primary, #401607);
     display: none;
+    /* oculto inicialmente */
     flex-direction: column;
     align-items: center;
     padding: 20px 0;
+    opacity: 0;
+    /* animação suave */
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+  }
+
+  .nav a.btn {
+    margin-top: 10px;
+    background: var(--accent, #865747);
+    color: var(--white, #EBEFF2);
+    font-weight: bold;
   }
 
   .nav a {
@@ -760,9 +772,21 @@ ul {
 
   .hamburger {
     display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+  }
+
+  .hamburger span {
+    width: 25px;
+    height: 3px;
+    background: var(--white, #EBEFF2);
+    border-radius: 2px;
   }
 
   .nav.active {
     display: flex;
+    opacity: 1;
+    transform: translateY(0);
   }
 }
