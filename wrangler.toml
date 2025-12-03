@@ -1,0 +1,5 @@
+name = "fga-site"
+compatibility_date = "2025-12-03"
+
+[site]
+bucket = "./"           # ou "dist", se você tiver uma pasta de build
