@@ -210,18 +210,24 @@ body {
 
 /* Garante que o container não esteja transparente */
 .hero-image {
-  background-color: var(--bg, #260A03); /* fallback sólido por baixo da imagem */
+  background-color: var(--bg, #260A03);
+  /* fallback sólido por baixo da imagem */
   overflow: hidden;
   border-radius: 12px;
   min-height: 320px;
   width: 100%;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
   position: relative;
-  z-index: 0; /* container abaixo do overlay */
+  z-index: 0;
+  /* container abaixo do overlay */
 }
 
 /* garante que a imagem fique opaca e adiciona uma camada escura semitransparente */
-.hero-image { position: relative; overflow: hidden; }
+.hero-image {
+  position: relative;
+  overflow: hidden;
+}
+
 .hero-image__img,
 .hero-image img {
   display: block;
@@ -236,7 +242,8 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.25); /* ajuste o último valor entre 0.1 e 0.5 */
+  background: rgba(0, 0, 0, 0.25);
+  /* ajuste o último valor entre 0.1 e 0.5 */
   pointer-events: none;
   transition: background 200ms ease;
   z-index: 1;
@@ -706,5 +713,56 @@ ul {
   .strip-overlay h1,
   .strip-overlay h6 {
     font-size: 18px;
+  }
+}
+
+/* Botão hamburguer */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: var(--white, #EBEFF2);
+  border-radius: 2px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .header-inner {
+    flex-wrap: wrap;
+  }
+
+  .nav {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: var(--primary, #401607);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+  }
+
+  .nav a {
+    color: var(--white, #EBEFF2);
+    padding: 12px;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav.active {
+    display: flex;
   }
 }
