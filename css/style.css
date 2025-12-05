@@ -13,17 +13,17 @@
   /* texto secundário */
   --white: #FFFFFF;
   /* fundo branco */
-  --primary: #004080;
+  --primary: #87CEEB;
   /* azul institucional */
-  --accent: #008000;
+  --accent: #E6C84F;
   /* verde Paraná */
-  --accent-dark: #006400;
+  --accent-dark: #E6C84F;
   /* verde escuro */
   --border: #CCCCCC;
   /* bordas suaves */
   --section-bg: #FFFFFF;
   /* seções com fundo branco */
-  --brand: #004080;
+  --brand: #87CEEB;
   /* cor da marca */
 }
 
@@ -79,7 +79,7 @@ body {
   left: 0;
   width: 100%;
   z-index: 1000;
-  background: var(--primary, #004080);
+  background: var(--primary, #87CEEB);
   color: var(--white, #FFFFFF);
   border-bottom: 1px solid var(--border, #CCCCCC);
 }
@@ -115,7 +115,7 @@ body {
 }
 
 .logo-text .highlight {
-  color: var(--accent, #008000);
+  color: var(--accent, #E6C84F);
 }
 
 .nav a {
@@ -132,7 +132,7 @@ body {
 }
 
 .site-footer {
-  background: var(--primary, #004080);
+  background: var(--primary, #87CEEB);
   color: var(--white, #FFFFFF);
   border-top: 1px solid var(--border, #CCCCCC);
 }
@@ -167,9 +167,9 @@ body {
 }
 
 .btn-primary {
-  background: var(--accent, #008000);
-  border-color: var(--accent, #008000);
-  color: var(--primary, #004080);
+  background: var(--accent, #E6C84F);
+  border-color: var(--accent, #E6C84F);
+  color: var(--white, #FFFFFF);
 }
 
 .btn-primary:hover {
@@ -179,18 +179,18 @@ body {
 
 .btn-outline {
   background: transparent;
-  border: 2px solid var(--accent, #008000);
-  color: var(--accent, #008000);
+  border: 2px solid var(--accent, #E6C84F);
+  color: var(--accent, #E6C84F);
 }
 
 .btn-outline:hover {
-  background: var(--accent, #008000);
-  color: var(--primary, #004080);
+  background: var(--accent, #E6C84F);
+  color: var(--text, #030303);
 }
 
 /* Hero */
 .hero {
-  background: linear-gradient(90deg, var(--white, #FFFFFF) 60%, var(--accent, #008000) 60%);
+  background: linear-gradient(90deg, var(--white, #FFFFFF) 60%, var(--accent, #E6C84F) 60%);
   border-bottom: 1px solid var(--border, #CCCCCC);
 }
 
@@ -299,7 +299,7 @@ section h3,
 .container h3 {
   font-size: 2rem;
   font-weight: 700;
-  color: var(--accent, #008000);
+  color: var(--text, #030303);
   margin-bottom: 40px;
   text-align: center;
 }
@@ -316,7 +316,7 @@ ul {
 }
 
 .card {
-  background: var(--primary, #004080);
+  background: var(--primary, #87CEEB);
   border: 1px solid var(--border, #CCCCCC);
   border-radius: 12px;
   padding: 24px;
@@ -333,14 +333,14 @@ ul {
 }
 
 .card h3 {
-  color: var(--accent, #008000);
+  color: var(--text, #333333);
   font-weight: 700;
   font-size: 18px;
   margin-bottom: 12px;
 }
 
 .card h3 i {
-  color: var(--accent, #008000);
+  color: var(--text, #333333);
   margin-right: 8px;
   font-size: 20px;
 }
@@ -360,7 +360,7 @@ ul {
 }
 
 .step {
-  background: var(--primary, #004080);
+  background: var(--primary, #87CEEB);
   border: 1px solid var(--border, #CCCCCC);
   border-radius: 16px;
   padding: 24px;
@@ -378,7 +378,7 @@ ul {
 .step-icon {
   font-size: 40px;
   margin-bottom: 12px;
-  color: var(--accent, #008000);
+  color: var(--text, #333333);
 }
 
 .step-number {
@@ -388,7 +388,7 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--accent, #008000);
+  background: var(--text, #333333);
   color: var(--white, #FFFFFF);
   font-weight: 700;
   font-size: 18px;
@@ -399,7 +399,7 @@ ul {
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 10px;
-  color: var(--accent, #008000);
+  color: var(---text, #333333);
 }
 
 .step p {
@@ -495,7 +495,7 @@ ul {
   font-size: 15px;
   border-radius: 8px;
   font-weight: 700;
-  background: var(--accent, #008000);
+  background: var(--accent, #E6C84F);
   color: var(--white, #FFFFFF);
   border: none;
   text-decoration: none;
@@ -583,7 +583,7 @@ ul {
 .form h2 {
   font-size: 24px;
   margin-bottom: 20px;
-  color: var(--accent, #008000);
+  color: var(--text, #333333);
 }
 
 .form input,
@@ -605,13 +605,13 @@ ul {
 
 .form input:focus,
 .form textarea:focus {
-  border-color: var(--accent, #008000);
+  border-color: var(--accent, #E6C84F);
   outline: none;
 }
 
 .form input:focus-visible,
 .form textarea:focus-visible {
-  outline: 2px solid var(--accent, #008000);
+  outline: 2px solid var(--accent, #E6C84F);
   outline-offset: 2px;
 }
 
@@ -622,14 +622,14 @@ ul {
   font-size: 16px;
   border-radius: 8px;
   font-weight: 700;
-  background: var(--accent, #008000);
+  background: var(--accent, #E6C84F);
   color: var(--white, #FFFFFF);
   border: none;
 }
 
 /* Aside de contato */
 .contact-aside {
-  background-color: #004080;
+  background-color: #87CEEB;
   border: 1px solid rgba(110, 115, 113, 0.35);
   border-radius: 12px;
   padding: 24px;
@@ -640,13 +640,13 @@ ul {
 .contact-aside h3 {
   font-size: 20px;
   font-weight: 700;
-  color: var(--accent, #008000);
+  color: var(--text, #333333);
   margin-bottom: 12px;
 }
 
 .contact-aside p {
   font-size: 15px;
-  color: var(--muted, #666666);
+  color: var(--text, #333333);
   margin-bottom: 8px;
 }
 
@@ -667,7 +667,7 @@ ul {
 
 .list-check li i {
   font-size: 18px;
-  color: var(--accent, #008000);
+  color: var(--accent, #E6C84F);
 }
 
 /* Animações auxiliares em cards (opcionais) */
@@ -797,7 +797,7 @@ ul {
     top: 70px;
     left: 0;
     width: 100%;
-    background: var(--primary, #004080);
+    background: var(--primary, #87CEEB);
     display: none;
     /* oculto inicialmente */
     flex-direction: column;
@@ -821,7 +821,7 @@ ul {
 
   .nav a.btn {
     margin-top: 10px;
-    background: var(--accent, #008000);
+    background: var(--accent, #E6C84F);
     color: var(--white, #FFFFFF);
     font-weight: bold;
   }
