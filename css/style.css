@@ -5,16 +5,26 @@
 
 /* Paleta de cores com fallback */
 :root {
-  --bg: #260A03;
-  --text: #EBEFF2;
-  --muted: #6E7371;
-  --white: #EBEFF2;
-  --primary: #441808;
-  --accent: #865747;
-  --accent-dark: #6E3F35;
-  --border: #6E737170;
-  --section-bg: #411607;
-  --brand: #260A03;
+  --bg: #F2F2F2;
+  /* fundo neutro claro */
+  --text: #333333;
+  /* texto principal escuro */
+  --muted: #666666;
+  /* texto secundário */
+  --white: #FFFFFF;
+  /* fundo branco */
+  --primary: #004080;
+  /* azul institucional */
+  --accent: #008000;
+  /* verde Paraná */
+  --accent-dark: #006400;
+  /* verde escuro */
+  --border: #CCCCCC;
+  /* bordas suaves */
+  --section-bg: #FFFFFF;
+  /* seções com fundo branco */
+  --brand: #004080;
+  /* cor da marca */
 }
 
 /* Reset básico e normalização leve */
@@ -43,7 +53,7 @@ body {
 /* Body e tipografia base */
 body {
   font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  background: var(--bg, #260A03);
+  background: var(--bg, #F2F2F2);
   color: var(--text, #EBEFF2);
   line-height: 1.6;
   margin: 0;
@@ -69,9 +79,9 @@ body {
   left: 0;
   width: 100%;
   z-index: 1000;
-  background: var(--primary, #401607);
-  color: var(--white, #EBEFF2);
-  border-bottom: 1px solid var(--border, #6E737170);
+  background: var(--primary, #004080);
+  color: var(--white, #FFFFFF);
+  border-bottom: 1px solid var(--border, #CCCCCC);
 }
 
 .header-inner {
@@ -101,15 +111,15 @@ body {
 .logo-text {
   font-size: 20px;
   font-weight: 700;
-  color: var(--white, #EBEFF2);
+  color: var(--white, #FFFFFF);
 }
 
 .logo-text .highlight {
-  color: var(--accent, #865747);
+  color: var(--accent, #008000);
 }
 
 .nav a {
-  color: var(--white, #EBEFF2);
+  color: var(--white, #FFFFFF);
   text-decoration: none;
   margin-left: 20px;
   font-weight: 600;
@@ -118,13 +128,13 @@ body {
 
 .nav a:hover,
 .nav a.active {
-  color: var(--accent, #865747);
+  color: var(--white, #FFFFFF);
 }
 
 .site-footer {
-  background: var(--primary, #401607);
-  color: var(--white, #EBEFF2);
-  border-top: 1px solid var(--border, #6E737170);
+  background: var(--primary, #004080);
+  color: var(--white, #FFFFFF);
+  border-top: 1px solid var(--border, #CCCCCC);
 }
 
 .footer-inner {
@@ -145,9 +155,9 @@ body {
   border-radius: 8px;
   text-decoration: none;
   font-weight: 700;
-  border: 1px solid var(--border, #6E737170);
+  border: 1px solid var(--border, #CCCCCC);
   color: var(--text, #EBEFF2);
-  background: var(--white, #EBEFF2);
+  background: var(--white, #FFFFFF);
   transition: all 0.3s ease;
 }
 
@@ -157,31 +167,31 @@ body {
 }
 
 .btn-primary {
-  background: var(--accent, #865747);
-  border-color: var(--accent, #865747);
-  color: var(--primary, #401607);
+  background: var(--accent, #008000);
+  border-color: var(--accent, #008000);
+  color: var(--primary, #004080);
 }
 
 .btn-primary:hover {
-  background: var(--accent-dark, #6E3F35);
-  color: var(--white, #EBEFF2);
+  background: var(--accent-dark, #006400);
+  color: var(--white, #FFFFFF);
 }
 
 .btn-outline {
   background: transparent;
-  border: 2px solid var(--accent, #865747);
-  color: var(--accent, #865747);
+  border: 2px solid var(--accent, #008000);
+  color: var(--accent, #008000);
 }
 
 .btn-outline:hover {
-  background: var(--accent, #865747);
-  color: var(--primary, #401607);
+  background: var(--accent, #008000);
+  color: var(--primary, #004080);
 }
 
 /* Hero */
 .hero {
-  background: linear-gradient(90deg, var(--white, #EBEFF2) 60%, var(--accent, #865747) 60%);
-  border-bottom: 1px solid var(--border, #6E737170);
+  background: linear-gradient(90deg, var(--white, #FFFFFF) 60%, var(--accent, #008000) 60%);
+  border-bottom: 1px solid var(--border, #CCCCCC);
 }
 
 .hero-inner {
@@ -196,11 +206,11 @@ body {
   font-size: 34px;
   line-height: 1.2;
   margin: 0 0 12px;
-  color: var(--brand, #260A03);
+  color: var(--white, #FFFFFF);
 }
 
 .hero-copy p {
-  color: var(--brand, #260A03);
+  color: var(--text, #333333);
   margin: 0 0 20px;
 }
 
@@ -210,7 +220,7 @@ body {
 
 /* Garante que o container não esteja transparente */
 .hero-image {
-  background-color: var(--bg, #260A03);
+  background-color: var(--bg, #F2F2F2);
   /* fallback sólido por baixo da imagem */
   overflow: hidden;
   border-radius: 12px;
@@ -269,13 +279,13 @@ body {
 
 .section {
   padding: 56px 0;
-  background: var(--bg, #260A03);
-  color: var(--text, #EBEFF2);
+  background: var(--bg, #F2F2F2);
+  color: var(--text, #030303);
 }
 
 .section-alt {
   padding: 60px 0;
-  background: var(--section-bg, #401607);
+  background: var(--section-bg, #FFFFFF);
   color: var(--text, #EBEFF2);
 }
 
@@ -289,7 +299,7 @@ section h3,
 .container h3 {
   font-size: 2rem;
   font-weight: 700;
-  color: var(--accent, #865747);
+  color: var(--accent, #008000);
   margin-bottom: 40px;
   text-align: center;
 }
@@ -306,8 +316,8 @@ ul {
 }
 
 .card {
-  background: var(--primary, #401607);
-  border: 1px solid var(--border, #6E737170);
+  background: var(--primary, #004080);
+  border: 1px solid var(--border, #CCCCCC);
   border-radius: 12px;
   padding: 24px;
   text-align: center;
@@ -323,21 +333,21 @@ ul {
 }
 
 .card h3 {
-  color: var(--accent, #865747);
+  color: var(--accent, #008000);
   font-weight: 700;
   font-size: 18px;
   margin-bottom: 12px;
 }
 
 .card h3 i {
-  color: var(--accent, #865747);
+  color: var(--accent, #008000);
   margin-right: 8px;
   font-size: 20px;
 }
 
 .card p {
   font-size: 15px;
-  color: var(--white, #EBEFF2);
+  color: var(--white, #FFFFFF);
   line-height: 1.5;
 }
 
@@ -350,8 +360,8 @@ ul {
 }
 
 .step {
-  background: var(--primary, #401607);
-  border: 1px solid var(--border, #6E737170);
+  background: var(--primary, #004080);
+  border: 1px solid var(--border, #CCCCCC);
   border-radius: 16px;
   padding: 24px;
   text-align: center;
@@ -368,7 +378,7 @@ ul {
 .step-icon {
   font-size: 40px;
   margin-bottom: 12px;
-  color: var(--accent, #865747);
+  color: var(--accent, #008000);
 }
 
 .step-number {
@@ -378,8 +388,8 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--accent, #865747);
-  color: var(--white, #EBEFF2);
+  background: var(--accent, #008000);
+  color: var(--white, #FFFFFF);
   font-weight: 700;
   font-size: 18px;
   margin: 0 auto 16px auto;
@@ -389,13 +399,13 @@ ul {
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 10px;
-  color: var(--accent, #865747);
+  color: var(--accent, #008000);
 }
 
 .step p {
   font-size: 16px;
   line-height: 1.4;
-  color: var(--white, #EBEFF2);
+  color: var(--white, #FFFFFF);
 }
 
 /* Animação de entrada */
@@ -421,8 +431,8 @@ ul {
   min-height: 280px;
   max-height: 480px;
   overflow: hidden;
-  border-bottom: 1px solid var(--border, #6E737170);
-  background-color: var(--bg, #260A03);
+  border-bottom: 1px solid var(--border, #CCCCCC);
+  background-color: var(--bg, #F2F2F2);
 }
 
 /* Vídeo atrás */
@@ -437,7 +447,7 @@ ul {
   /* vídeo atrás */
   pointer-events: none;
   /* evita que o vídeo capture cliques */
-  background-color: var(--bg, #260A03);
+  background-color: var(--bg, #F2F2F2);
 }
 
 /* Overlay sempre acima do vídeo e centralizado */
@@ -485,8 +495,8 @@ ul {
   font-size: 15px;
   border-radius: 8px;
   font-weight: 700;
-  background: var(--accent, #865747);
-  color: var(--white, #EBEFF2);
+  background: var(--accent, #008000);
+  color: var(--white, #FFFFFF);
   border: none;
   text-decoration: none;
   display: inline-block;
@@ -551,7 +561,7 @@ ul {
 /* Formulário Orçamento */
 .section-orcamento {
   padding: 60px 0;
-  background: var(--section-bg, #401607);
+  background: var(--section-bg, #FFFFFF);
   color: var(--text, #EBEFF2);
 }
 
@@ -564,17 +574,17 @@ ul {
 }
 
 .form {
-  background: var(--primary, #401607);
+  background: var(--primary, #004080);
   border: 1px solid rgba(110, 115, 113, 0.35);
   border-radius: 12px;
   padding: 24px;
-  color: var(--white, #EBEFF2);
+  color: var(--white, #FFFFFF);
 }
 
 .form h2 {
   font-size: 24px;
   margin-bottom: 20px;
-  color: var(--accent, #865747);
+  color: var(--accent, #008000);
 }
 
 .form input,
@@ -585,24 +595,24 @@ ul {
   border: 1px solid rgba(110, 115, 113, 0.35);
   border-radius: 8px;
   font-size: 16px;
-  background: var(--bg, #260A03);
+  background: var(--bg, #F2F2F2);
   color: var(--text, #EBEFF2);
 }
 
 .form input::placeholder,
 .form textarea::placeholder {
-  color: var(--muted, #6E7371);
+  color: var(--muted, #666666);
 }
 
 .form input:focus,
 .form textarea:focus {
-  border-color: var(--accent, #865747);
+  border-color: var(--accent, #008000);
   outline: none;
 }
 
 .form input:focus-visible,
 .form textarea:focus-visible {
-  outline: 2px solid var(--accent, #865747);
+  outline: 2px solid var(--accent, #008000);
   outline-offset: 2px;
 }
 
@@ -613,31 +623,31 @@ ul {
   font-size: 16px;
   border-radius: 8px;
   font-weight: 700;
-  background: var(--accent, #865747);
-  color: var(--white, #EBEFF2);
+  background: var(--accent, #008000);
+  color: var(--white, #FFFFFF);
   border: none;
 }
 
 /* Aside de contato */
 .contact-aside {
-  background: var(--primary, #401607);
+  background: var(--primary, #004080);
   border: 1px solid rgba(110, 115, 113, 0.35);
   border-radius: 12px;
   padding: 24px;
-  color: var(--white, #EBEFF2);
+  color: var(--white, #FFFFFF);
   min-height: 240px;
 }
 
 .contact-aside h3 {
   font-size: 20px;
   font-weight: 700;
-  color: var(--accent, #865747);
+  color: var(--accent, #008000);
   margin-bottom: 12px;
 }
 
 .contact-aside p {
   font-size: 15px;
-  color: var(--muted, #6E7371);
+  color: var(--muted, #666666);
   margin-bottom: 8px;
 }
 
@@ -652,13 +662,13 @@ ul {
   align-items: center;
   gap: 10px;
   font-size: 15px;
-  color: var(--white, #EBEFF2);
+  color: var(--white, #FFFFFF);
   margin-bottom: 10px;
 }
 
 .list-check li i {
   font-size: 18px;
-  color: var(--accent, #865747);
+  color: var(--accent, #008000);
 }
 
 /* Animações auxiliares em cards (opcionais) */
@@ -755,7 +765,7 @@ ul {
 .hamburger span {
   width: 25px;
   height: 3px;
-  background: var(--white, #EBEFF2);
+  background: var(--white, #FFFFFF);
   border-radius: 2px;
 }
 
@@ -788,7 +798,7 @@ ul {
     top: 70px;
     left: 0;
     width: 100%;
-    background: var(--primary, #401607);
+    background: var(--primary, #004080);
     display: none;
     /* oculto inicialmente */
     flex-direction: column;
@@ -800,7 +810,7 @@ ul {
   }
 
   .nav a {
-    color: var(--white, #EBEFF2);
+    color: var(--white, #FFFFFF);
     padding: 12px;
     text-decoration: none;
     display: block;
@@ -812,8 +822,8 @@ ul {
 
   .nav a.btn {
     margin-top: 10px;
-    background: var(--accent, #865747);
-    color: var(--white, #EBEFF2);
+    background: var(--accent, #008000);
+    color: var(--white, #FFFFFF);
     font-weight: bold;
   }
 
@@ -827,7 +837,7 @@ ul {
   .hamburger span {
     width: 25px;
     height: 3px;
-    background: var(--white, #EBEFF2);
+    background: var(--white, #FFFFFF);
     border-radius: 2px;
   }
 
