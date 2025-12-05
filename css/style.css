@@ -206,7 +206,7 @@ body {
   font-size: 34px;
   line-height: 1.2;
   margin: 0 0 12px;
-  color: var(--white, #FFFFFF);
+  color: var(--text);
 }
 
 .hero-copy p {
@@ -574,7 +574,6 @@ ul {
 }
 
 .form {
-  background: var(--primary, #004080);
   border: 1px solid rgba(110, 115, 113, 0.35);
   border-radius: 12px;
   padding: 24px;
@@ -630,11 +629,11 @@ ul {
 
 /* Aside de contato */
 .contact-aside {
-  background: var(--primary, #004080);
+  background-color: #004080;
   border: 1px solid rgba(110, 115, 113, 0.35);
   border-radius: 12px;
   padding: 24px;
-  color: var(--white, #FFFFFF);
+  color: var(--text, #333333);
   min-height: 240px;
 }
 
