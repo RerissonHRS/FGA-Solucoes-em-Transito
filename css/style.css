@@ -270,6 +270,39 @@ padding-top: calc(80px + 40vh);
 }
 
 /* Botões */
+/* Estilos para o link do WhatsApp (whatsapp-link) */
+.whatsapp-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff !important;
+  /* Força cor branca, útil em áreas com cores de link conflitantes */
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  padding: 5px 10px;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease;
+}
+
+/* ⭐️ CORREÇÃO: Usando .whatsapp-link:hover ⭐️ */
+.whatsapp-link:hover {
+  background: #1ebe5d;
+}
+
+/* Estilos para o ícone, caso você use um SVG externo */
+.icon-whatsapp {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1);
+  background: #1ebe5d
+    /* Esta linha é necessária apenas se o ícone for um SVG preto externo (<img>) 
+     e você precisar forçá-lo a ser branco no fundo verde. 
+     Se você estiver usando o <i> Font Awesome (que usa a cor 'color'), ela pode ser removida. */
+}
+
 .btn {
   display: inline-block;
   padding: 12px 18px;
