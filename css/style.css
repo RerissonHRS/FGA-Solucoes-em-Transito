@@ -214,7 +214,7 @@ padding-top: calc(80px + 40vh);
 
 /* ===== FOOTER ===== */
 .site-footer {
-  background: var(--primary, #87CEEB);
+  background: var(--muted, #666666);
   color: var(--white, #FFFFFF);
   border-top: 1px solid var(--border, #CCCCCC);
 }
@@ -845,14 +845,9 @@ ul {
 /* Mobile: 1 coluna */
 @media (max-width: 540px) {
 
-  /* ----------------------------------------------------------------- */
-  /* ⭐️ AJUSTE CRÍTICO AQUI: CALCULA ALTURA DO HEADER FIXO NO MOBILE */
+  /* ⭐️ CORREÇÃO NO MOBILE: Apenas a altura do header principal sem o vídeo. */
   body {
-    /* CÁLCULO MOBILE:
-       Estimativa total de 340px:
-       ~40px (header-contact empilhado) + ~100px (header-inner empilhado) + 200px (hero-strip)
-    */
-    padding-top: 160px;
+    padding-top: 250px;
   }
 
   /* ----------------------------------------------------------------- */
