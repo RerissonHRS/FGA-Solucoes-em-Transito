@@ -1,33 +1,23 @@
 /* ================================
-   FGA - Assessoria de Trânsito
-   CSS final ajustado e responsivo
-   ================================ */
+   FGA - Assessoria de Trânsito
+   CSS final ajustado e responsivo
+   ================================ */
 
 /* Paleta de cores com fallback */
 :root {
   --bg: #F2F2F2;
-  /* fundo neutro claro */
   --text: #333333;
-  /* texto principal escuro */
   --muted: #666666;
-  /* texto secundário */
   --white: #FFFFFF;
-  /* fundo branco */
   --primary: #87CEEB;
-  /* azul institucional */
   --accent: #E6C84F;
-  /* verde Paraná */
   --accent-dark: #E6C84F;
-  /* verde escuro */
   --border: #CCCCCC;
-  /* bordas suaves */
   --section-bg: #FFFFFF;
-  /* seções com fundo branco */
   --brand: #87CEEB;
-  /* cor da marca */
 }
 
-/* Reset básico e normalização leve */
+/* Reset básico */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -39,27 +29,42 @@ html {
   text-size-adjust: 100%;
 }
 
-/* ou, para bloquear redimensionamento automático de fontes em alguns navegadores móveis */
-html.no-text-resize {
-  -webkit-text-size-adjust: none;
-  text-size-adjust: none;
-}
-
 html,
 body {
-  height: 100%;
+  min-height: 100%;
+  height: auto;
+  overflow-y: auto;
+  /* habilita rolagem vertical */
+  overflow-x: scroll;
+  /* evita barra horizontal */
 }
 
+main {
+  min-height: 100vh;
+}
+
+/* ----------------------------------------------------------------- */
+/* ⭐️ AJUSTE CRÍTICO AQUI: CALCULA ALTURA DO HEADER FIXO (Topo + Faixa de Vídeo) */
 /* Body e tipografia base */
 body {
   font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   background: var(--bg, #F2F2F2);
-  color: var(--text, #EBEFF2);
+  color: var(--text, #333333);
   line-height: 1.6;
   margin: 0;
-  padding: 110px 0 0 0;
-  /* espaço do header fixo */
+
+  /* ⭐️ CORREÇÃO: Usar apenas a altura do header principal (Faixa de Contato + Inner Header). 
+        Altura total aproximada: 40px + 80px = 120px */
+  padding-top: 120px;
 }
+
+/* CÁLCULO DESKTOP: 
+     Aproximadamente 80px (header-contact + header-inner) + 40vh (hero-strip)
+     Garante que o conteúdo em <main> comece abaixo de todo o header fixo. */
+padding-top: calc(80px + 40vh);
+}
+
+/* ----------------------------------------------------------------- */
 
 .section:first-of-type {
   margin-top: 0;
@@ -72,25 +77,81 @@ body {
   padding: 0 20px;
 }
 
-/* Header e Footer */
+/* ===== HEADER ===== */
 .site-header {
   position: fixed;
+  /* mantém fixo no topo */
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
-  background: var(--primary, #87CEEB);
+  background: var(--muted, #666666);
   color: var(--white, #FFFFFF);
   border-bottom: 1px solid var(--border, #CCCCCC);
+  display: flex;
+  flex-direction: column;
 }
 
+/* Faixa de contato */
+.header-contact {
+  display: flex;
+
+  /* ⭐️ MUDANÇA CRÍTICA: Centraliza todo o conteúdo horizontalmente */
+  justify-content: center;
+
+  align-items: center;
+  font-size: 14px;
+  padding: 6px 20px;
+  border-bottom: 1px solid var(--border, #CCCCCC);
+
+  /* ⭐️ Adiciona espaçamento entre o bloco de contato e os ícones sociais */
+  gap: 40px;
+}
+
+.header-contact .contact-info {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.header-contact .contact-info i {
+  margin-right: 6px;
+  color: var(--accent, #FFD966);
+}
+
+.header-contact .contact-social a {
+  color: var(--primary, #87CEEB);
+  margin-left: 12px;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.header-contact .contact-social a:hover {
+  color: var(--accent-dark, #E6C84F);
+}
+
+/* Bloco principal do header */
 .header-inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 12px 20px;
+  gap: 24px;
 }
 
+.header-left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Logo */
 .logo {
   display: flex;
   align-items: center;
@@ -118,10 +179,22 @@ body {
   color: var(--accent, #E6C84F);
 }
 
+/* Menu + botão agrupados à direita */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
 .nav a {
   color: var(--white, #FFFFFF);
   text-decoration: none;
-  margin-left: 20px;
   font-weight: 600;
   transition: color 0.3s ease;
 }
@@ -131,6 +204,15 @@ body {
   color: var(--white, #FFFFFF);
 }
 
+/* Botão hamburguer */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+/* ===== FOOTER ===== */
 .site-footer {
   background: var(--primary, #87CEEB);
   color: var(--white, #FFFFFF);
@@ -146,6 +228,45 @@ body {
 
 .footer-brand img {
   height: 28px;
+}
+
+/* ===== RESPONSIVO PADRÃO ===== */
+@media (max-width: 540px) {
+  .header-contact {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    padding: 6px 12px;
+  }
+
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .header-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 8px;
+    margin-top: 12px;
+  }
+
+  .nav a {
+    margin: 0;
+  }
+
+  .hamburger {
+    align-self: flex-end;
+  }
 }
 
 /* Botões */
@@ -447,7 +568,7 @@ ul {
   /* vídeo atrás */
   pointer-events: none;
   /* evita que o vídeo capture cliques */
-  background-color: var(--bg, #F2F2F2);
+  background-color: var(--border, #CCCCCC);
 }
 
 /* Overlay sempre acima do vídeo e centralizado */
@@ -723,6 +844,19 @@ ul {
 
 /* Mobile: 1 coluna */
 @media (max-width: 540px) {
+
+  /* ----------------------------------------------------------------- */
+  /* ⭐️ AJUSTE CRÍTICO AQUI: CALCULA ALTURA DO HEADER FIXO NO MOBILE */
+  body {
+    /* CÁLCULO MOBILE:
+       Estimativa total de 340px:
+       ~40px (header-contact empilhado) + ~100px (header-inner empilhado) + 200px (hero-strip)
+    */
+    padding-top: 160px;
+  }
+
+  /* ----------------------------------------------------------------- */
+
   .cards.cards-5 {
     grid-template-columns: 1fr;
   }
@@ -790,11 +924,20 @@ ul {
   /* Navegação mobile */
   .header-inner {
     flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
   }
 
   .nav {
-    position: absolute;
-    top: 70px;
+    position: fixed;
+    /* fixo junto ao header */
+    top: 100px;
+    /* altura da faixa + header principal */
     left: 0;
     width: 100%;
     background: var(--primary, #87CEEB);
@@ -806,6 +949,8 @@ ul {
     opacity: 0;
     transform: translateY(-10px);
     transition: all 0.3s ease;
+    z-index: 999;
+    /* acima do conteúdo */
   }
 
   .nav a {
@@ -816,7 +961,6 @@ ul {
     width: 100%;
     text-align: center;
     margin: 10px 0;
-    /* ajuste de espaçamento */
   }
 
   .nav a.btn {
