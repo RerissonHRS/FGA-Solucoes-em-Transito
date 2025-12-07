@@ -795,15 +795,7 @@ ul {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* FORÇA CORES CORRETAS DO TEXTO NO ASIDE */
-.contact-aside *,
-.contact-aside h3,
-.contact-aside p,
-.contact-aside span,
-.contact-aside small,
-.contact-aside strong {
-  color: var(--text) !important;
-}
+
 
 .contact-aside:hover {
   transform: translateY(-4px);
