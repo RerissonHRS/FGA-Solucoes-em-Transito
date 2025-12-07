@@ -716,69 +716,91 @@ ul {
 .section-orcamento {
   padding: 60px 0;
   background: var(--section-bg, #FFFFFF);
-  color: var(--text, #EBEFF2);
+  color: var(--text, #374151);
 }
 
 .form-grid {
   display: grid;
   grid-template-columns: 1.5fr 0.8fr;
-  /* formulário + aside */
   gap: 32px;
   align-items: start;
 }
 
+/* FORM NO MESMO PADRÃO DO CONTACT-ASIDE */
 .form {
-  border: 1px solid rgba(110, 115, 113, 0.35);
-  border-radius: 12px;
+  background: var(--white, #FFFFFF);
+  border: 1px solid var(--border, rgba(110, 115, 113, 0.35));
+  border-left: 5px solid var(--accent, #E6C84F);
+  border-radius: 10px;
   padding: 24px;
-  color: var(--white, #FFFFFF);
+  color: var(--text, #374151);
+  min-height: 240px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.form:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.10);
+}
+
+/* TÍTULO */
 .form h2 {
   font-size: 24px;
   margin-bottom: 20px;
-  color: var(--text, #333333);
+  font-weight: 700;
+  color: var(--primary, #0B1C2D);
 }
 
+/* INPUTS E TEXTAREA */
 .form input,
 .form textarea {
   width: 100%;
-  padding: 12px;
+  padding: 12px 14px;
   margin-bottom: 16px;
-  border: 1px solid rgba(110, 115, 113, 0.35);
+  border: 1px solid var(--border, rgba(110, 115, 113, 0.35));
   border-radius: 8px;
-  font-size: 16px;
-  background: var(--bg, #F2F2F2);
-  color: var(--text, #EBEFF2);
+  font-size: 15px;
+  background: #F9FAFB;
+  color: var(--text, #374151);
+  transition: border 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
 }
 
 .form input::placeholder,
 .form textarea::placeholder {
-  color: var(--muted, #666666);
+  color: #9CA3AF;
+  font-weight: 400;
 }
 
+/* FOCO PADRÃO JURÍDICO */
 .form input:focus,
 .form textarea:focus {
   border-color: var(--accent, #E6C84F);
   outline: none;
+  background: #FFFFFF;
+  box-shadow: 0 0 0 2px rgba(230, 200, 79, 0.20);
 }
 
-.form input:focus-visible,
-.form textarea:focus-visible {
-  outline: 2px solid var(--accent, #E6C84F);
-  outline-offset: 2px;
-}
-
+/* BOTÃO PADRÃO INSTITUCIONAL */
 .form button.btn-primary,
 .form button[type="submit"] {
   width: 100%;
   padding: 14px;
-  font-size: 16px;
+  font-size: 15px;
   border-radius: 8px;
   font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
   background: var(--accent, #E6C84F);
-  color: var(--white, #FFFFFF);
+  color: #000;
   border: none;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.form button:hover {
+  background: var(--accent-dark, #d4b73f);
+  transform: translateY(-2px);
 }
 
 /* Aside de contato */
@@ -786,7 +808,6 @@ ul {
   background: var(--white);
   border: 1px solid var(--border);
   border-left: 5px solid var(--accent);
-  /* mesmo destaque dos cards */
   border-radius: 10px;
   padding: 24px;
   color: var(--text);
@@ -795,13 +816,12 @@ ul {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-
-
 .contact-aside:hover {
   transform: translateY(-4px);
   box-shadow: 0 10px 22px rgba(0, 0, 0, 0.10);
 }
 
+/* TÍTULO */
 .contact-aside h3 {
   font-size: 20px;
   font-weight: 700;
@@ -809,12 +829,87 @@ ul {
   margin-bottom: 12px;
 }
 
+/* TEXTOS */
 .contact-aside p {
   font-size: 15px;
-  color: var(--text, #374151);
+  color: var(--text, #374151) !important;
   margin-bottom: 8px;
 }
 
+/* GARANTE QUE NENHUM TEXTO FIQUE BRANCO */
+.contact-aside *,
+.contact-aside span,
+.contact-aside small,
+.contact-aside strong {
+  color: var(--text) !important;
+}
+
+/* ===== INPUTS PADRÃO JURÍDICO ===== */
+.contact-aside .input-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+  background: #F9FAFB;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 14px;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-aside .input-group:focus-within {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px rgba(191, 161, 74, 0.20);
+  background: #ffffff;
+}
+
+/* ÍCONES DOS INPUTS */
+.contact-aside .input-group i,
+.contact-aside .input-group svg {
+  color: var(--accent);
+  font-size: 18px;
+  min-width: 22px;
+}
+
+/* CAMPOS */
+.contact-aside input,
+.contact-aside textarea {
+  border: none;
+  outline: none;
+  background: transparent;
+  width: 100%;
+  font-size: 15px;
+  color: var(--text);
+  font-weight: 500;
+}
+
+.contact-aside input::placeholder,
+.contact-aside textarea::placeholder {
+  color: #9CA3AF;
+  font-weight: 400;
+}
+
+/* BOTÃO */
+.contact-aside button {
+  width: 100%;
+  background: var(--accent);
+  color: #000;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.contact-aside button:hover {
+  background: var(--accent-dark);
+  transform: translateY(-2px);
+}
+
+/* ===== LISTA COM CHECK (SE FOR USAR) ===== */
 .list-check {
   list-style: none;
   padding: 0;
@@ -826,13 +921,13 @@ ul {
   align-items: center;
   gap: 10px;
   font-size: 15px;
-  color: var(--white, #FFFFFF);
+  color: var(--text);
   margin-bottom: 10px;
 }
 
 .list-check li i {
   font-size: 18px;
-  color: var(--accent, #E6C84F);
+  color: var(--accent);
 }
 
 /* Animações auxiliares em cards (opcionais) */
