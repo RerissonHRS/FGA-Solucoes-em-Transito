@@ -5,17 +5,22 @@
 
 /* Paleta de cores com fallback */
 :root {
-  --bg: #F2F2F2;
-  --text: #333333;
-  --muted: #666666;
+  --bg: #F4F4F4;
+  --text: #1F2933;
+  --muted: #2C2F36;
   --white: #FFFFFF;
-  --primary: #87CEEB;
-  --accent: #E6C84F;
-  --accent-dark: #E6C84F;
-  --border: #CCCCCC;
+
+  --primary: #0B1C2D;
+  /* Azul marinho institucional */
+  --accent: #BFA14A;
+  /* Dourado tradicional jurídico */
+  --accent-dark: #9E843A;
+
+  --border: #D1D5DB;
   --section-bg: #FFFFFF;
-  --brand: #87CEEB;
+  --brand: #0B1C2D;
 }
+
 
 /* Reset básico */
 * {
@@ -55,7 +60,7 @@ body {
 
   /* ⭐️ CORREÇÃO: Usar apenas a altura do header principal (Faixa de Contato + Inner Header). 
         Altura total aproximada: 40px + 80px = 120px */
-  padding-top: 120px;
+  padding-top: 160px;
 }
 
 /* CÁLCULO DESKTOP: 
@@ -85,9 +90,9 @@ padding-top: calc(80px + 40vh);
   left: 0;
   width: 100%;
   z-index: 1000;
-  background: var(--muted, #666666);
-  color: var(--white, #FFFFFF);
-  border-bottom: 1px solid var(--border, #CCCCCC);
+  background: var(--primary);
+  color: var(--white);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
   display: flex;
   flex-direction: column;
 }
@@ -170,9 +175,9 @@ padding-top: calc(80px + 40vh);
 }
 
 .logo-text {
-  font-size: 20px;
+  color: var(--white);
   font-weight: 700;
-  color: var(--white, #FFFFFF);
+  letter-spacing: 0.6px;
 }
 
 .logo-text .highlight {
@@ -214,9 +219,9 @@ padding-top: calc(80px + 40vh);
 
 /* ===== FOOTER ===== */
 .site-footer {
-  background: var(--muted, #666666);
-  color: var(--white, #FFFFFF);
-  border-top: 1px solid var(--border, #CCCCCC);
+  background: var(--primary);
+  color: var(--white);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .footer-inner {
@@ -306,13 +311,15 @@ padding-top: calc(80px + 40vh);
 .btn {
   display: inline-block;
   padding: 12px 18px;
-  border-radius: 8px;
+  border-radius: 6px;
   text-decoration: none;
   font-weight: 700;
-  border: 1px solid var(--border, #CCCCCC);
-  color: var(--text, #EBEFF2);
-  background: var(--white, #FFFFFF);
+  border: 1px solid var(--border);
+  color: var(--text);
+  background: var(--white);
   transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
 }
 
 .btn-sm {
@@ -321,14 +328,14 @@ padding-top: calc(80px + 40vh);
 }
 
 .btn-primary {
-  background: var(--accent, #E6C84F);
-  border-color: var(--accent, #E6C84F);
-  color: var(--white, #FFFFFF);
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #000;
 }
 
 .btn-primary:hover {
-  background: var(--accent-dark, #006400);
-  color: var(--white, #FFFFFF);
+  background: var(--accent-dark);
+  color: #000;
 }
 
 .btn-outline {
@@ -469,39 +476,41 @@ ul {
   gap: 24px;
 }
 
-.card {
-  background: var(--primary, #87CEEB);
-  border: 1px solid var(--border, #CCCCCC);
-  border-radius: 12px;
+.card,
+.step {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 5px solid var(--accent);
+  border-radius: 10px;
   padding: 24px;
   text-align: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
   -webkit-transform: translateY(-6px);
   -ms-transform: translateY(-6px);
-  transform: translateY(-6px);
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.10);
 }
 
 .card h3 {
-  color: var(--text, #333333);
+  color: var(--primary, #0B1C2D);
   font-weight: 700;
   font-size: 18px;
   margin-bottom: 12px;
 }
 
 .card h3 i {
-  color: var(--text, #333333);
+  color: var(--primary, #0B1C2D);
   margin-right: 8px;
   font-size: 20px;
 }
 
 .card p {
   font-size: 15px;
-  color: var(--white, #FFFFFF);
+  color: #374151;
   line-height: 1.5;
 }
 
@@ -511,15 +520,6 @@ ul {
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 24px;
   margin-top: 40px;
-}
-
-.step {
-  background: var(--primary, #87CEEB);
-  border: 1px solid var(--border, #CCCCCC);
-  border-radius: 16px;
-  padding: 24px;
-  text-align: center;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .step:hover {
@@ -557,9 +557,9 @@ ul {
 }
 
 .step p {
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1.4;
-  color: var(--white, #FFFFFF);
+  color: #374151;
 }
 
 /* Animação de entrada */
@@ -783,24 +783,43 @@ ul {
 
 /* Aside de contato */
 .contact-aside {
-  background-color: #87CEEB;
-  border: 1px solid rgba(110, 115, 113, 0.35);
-  border-radius: 12px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 5px solid var(--accent);
+  /* mesmo destaque dos cards */
+  border-radius: 10px;
   padding: 24px;
-  color: var(--text, #333333);
+  color: var(--text);
   min-height: 240px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* FORÇA CORES CORRETAS DO TEXTO NO ASIDE */
+.contact-aside *,
+.contact-aside h3,
+.contact-aside p,
+.contact-aside span,
+.contact-aside small,
+.contact-aside strong {
+  color: var(--text) !important;
+}
+
+.contact-aside:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.10);
 }
 
 .contact-aside h3 {
   font-size: 20px;
   font-weight: 700;
-  color: var(--text, #333333);
+  color: var(--primary, #0B1C2D);
   margin-bottom: 12px;
 }
 
 .contact-aside p {
   font-size: 15px;
-  color: var(--text, #333333);
+  color: var(--text, #374151);
   margin-bottom: 8px;
 }
 
