@@ -6,11 +6,11 @@
 /* Paleta de cores com fallback */
 :root {
   --bg: #F4F4F4;
-  --text: #1F2933;
-  --muted: #2C2F36;
+  --text: #2C2F36;
+  --muted: #7a7b7e;
   --white: #FFFFFF;
 
-  --primary: #0B1C2D;
+  --primary: #363636;
   /* Azul marinho institucional */
   --accent: #BFA14A;
   /* Dourado tradicional jurídico */
@@ -465,19 +465,121 @@ section h3,
   text-align: center;
 }
 
+/* ===== LISTAS INFORMATIVAS ===== */
+.section-alt h3 {
+  margin-top: 24px;
+  margin-bottom: 12px;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--primary, #87CEEB);
+  /* azul institucional */
+  align-items: center;
+  gap: 8px;
+}
+
+.section-alt ul {
+  position: center;
+  list-style: none;
+  /* remove marcadores padrão */
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+
+.section-alt ul li {
+  position: center;
+  padding-left: 28px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text, #333333);
+}
+
+/* ===== Marcador customizado com ícone circular ===== */
+.section-alt ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+
+.section-alt ul li {
+  position: relative;
+  /* necessário para posicionar o ::before */
+  padding-left: 28px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text, #333333);
+}
+
+.section-alt ul li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--accent, #E6C84F);
+  font-weight: bold;
+}
+
+/* ===== Ícones via ::before apenas para a seção informativa ===== */
+/* evita afetar títulos de outras seções (ex.: Serviços) */
+.informativo h3::before {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-size: 18px;
+  color: var(--accent, #E6C84F);
+  display: inline-block;
+  width: 20px;
+  margin-right: 8px;
+  text-align: center;
+}
+
+/* ícones específicos para os títulos dentro de .informativo */
+.informativo h3:nth-of-type(1)::before {
+  content: "\f1b9";
+}
+
+/* carro */
+.informativo h3:nth-of-type(2)::before {
+  content: "\f05e";
+}
+
+/* ban */
+.informativo h3:nth-of-type(3)::before {
+  content: "\f024";
+}
+
+/* lista */
+
+/* OBSERVAÇÃO: se houver outros h3 dentro de .informativo (como o h2 convertido),
+   ajuste os nth-of-type ou use classes específicas nos h3 para garantir precisão. */
+
+/* lista para Tipos de Multas */
+
+
 ul {
   text-align: left;
 }
 
-/* Cards */
+/* Grid de cards */
 .cards-5 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 24px;
+  align-items: stretch;
+  /* garante que os itens do grid tenham a mesma altura */
 }
 
+/* Card e step: layout e aparência */
 .card,
 .step {
+  display: flex;
+  /* torna o card um flex container */
+  flex-direction: column;
+  /* empilha conteúdo verticalmente */
+  justify-content: flex-start;
+  align-items: stretch;
+  height: 100%;
+  /* ocupa toda a altura da célula do grid */
   background: var(--white);
   border: 1px solid var(--border);
   border-left: 5px solid var(--accent);
@@ -486,33 +588,63 @@ ul {
   text-align: center;
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
 }
 
+/* Hover */
 .card:hover {
-  -webkit-transform: translateY(-6px);
-  -ms-transform: translateY(-6px);
   transform: translateY(-5px);
   box-shadow: 0 10px 22px rgba(0, 0, 0, 0.10);
 }
 
+/* Título e ícone */
 .card h3 {
   color: var(--primary, #0B1C2D);
   font-weight: 700;
   font-size: 18px;
-  margin-bottom: 12px;
+  margin: 0 0 12px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 }
 
+/* Ícone inline no título */
 .card h3 i {
   color: var(--primary, #0B1C2D);
-  margin-right: 8px;
   font-size: 20px;
+  line-height: 1;
 }
 
+/* Texto do card ocupa o espaço disponível */
 .card p {
   font-size: 15px;
   color: #374151;
   line-height: 1.5;
+  margin: 0;
+  flex: 1 1 auto;
+  /* faz o parágrafo crescer para igualar alturas */
 }
+
+/* Se houver CTA no final do card */
+.card .card-cta {
+  margin-top: 16px;
+  align-self: center;
+  /* ou stretch para ocupar toda a largura */
+}
+
+/* Responsivo: uma coluna em telas pequenas */
+@media (max-width: 540px) {
+  .cards-5 {
+    grid-template-columns: 1fr;
+  }
+
+  .card,
+  .step {
+    padding: 16px;
+  }
+}
+
 
 /* Steps */
 .steps-illustrated {
@@ -749,7 +881,7 @@ ul {
   font-size: 24px;
   margin-bottom: 20px;
   font-weight: 700;
-  color: var(--primary, #0B1C2D);
+  color: var(--primary, #080808);
 }
 
 /* INPUTS E TEXTAREA */

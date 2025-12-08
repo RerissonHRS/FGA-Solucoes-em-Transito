@@ -14,51 +14,52 @@
 
 <body>
 
+  <!-- Cabeçalho fixo -->
   <header class="site-header">
     <div class="header-contact">
       <div class="contact-info">
-        <i class="fas fa-envelope"></i> contato@fga.com.br
-
+        <i class="fas fa-envelope"></i> fredericoalvao.adv@gmail.com
         <i class="fas fa-phone"></i> (44) 3025-0000
-
-        <a href="https://wa.me/554498219161" target="_blank" class="whatsapp-link">
+        <a href="https://wa.me/554498219161" target="_blank" class="whatsapp-link" aria-label="Contato pelo WhatsApp">
           <i class="fab fa-whatsapp"></i>
           <span>Nosso WhatsApp</span>
         </a>
       </div>
-      <div class="contact-social">
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
+      <div class="contact-social" aria-label="Redes sociais">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
       </div>
     </div>
 
     <div class="container header-inner">
-      <div class="header-left">
-        <a class="logo" href="index.html">
+      <div class="header-right">
+        <a class="logo" href="index.html" aria-label="Ir para a página inicial">
           <img src="img/fga.png" alt="FGA - Assessoria de Trânsito" />
           <span class="logo-text">FGA - Recursos de Multas de Trânsito</span>
         </a>
       </div>
 
-      <div class="header-right">
-        <nav class="nav" id="menu">
+      <div class="header-left">
+        <nav class="nav" id="menu" aria-label="Menu principal">
           <a href="index.html" class="active">Início</a>
           <a href="como-funciona.html">Como funciona</a>
-          <a href="orcamento.html" class="btn btn-sm btn-primary">Fale conosco</a>
+          <a href="orcamento.html" class="btn btn-sm btn-primary">Faça uma consulta sem compromisso</a>
         </nav>
 
-        <div class="hamburger" id="hamburger">
+        <button class="hamburger" id="hamburger" aria-label="Abrir menu">
           <span></span>
           <span></span>
           <span></span>
-        </div>
+        </button>
       </div>
     </div>
   </header>
 
+  <!-- Conteúdo principal -->
   <main>
 
-    <section class="hero-strip">
+    <!-- Faixa de vídeo -->
+    <section class="hero-strip" aria-label="Destaque">
       <video autoplay muted loop playsinline class="strip-video">
         <source src="videos/trafego.mp4" type="video/mp4">
       </video>
@@ -72,28 +73,29 @@
       </div>
     </section>
 
+    <!-- Serviços -->
     <section id="servicos" class="section section-alt">
       <div class="container">
         <h2>Serviços</h2>
         <div class="cards cards-5">
           <article class="card fade-up">
-            <h3><i class="fas fa-search"></i> Análise técnica da autuação</h3>
+            <h3><i class="fas fa-search" aria-hidden="true"></i> Análise técnica da autuação</h3>
             <p>Verificamos fundamentos legais e técnicos para definir a melhor estratégia de defesa.</p>
           </article>
           <article class="card fade-up">
-            <h3><i class="fas fa-exclamation-triangle"></i> Irregularidades e vícios</h3>
+            <h3><i class="fas fa-exclamation-triangle" aria-hidden="true"></i> Irregularidades e vícios</h3>
             <p>Identificamos falhas formais e vícios que podem anular a penalidade.</p>
           </article>
           <article class="card fade-up">
-            <h3><i class="fas fa-file-signature"></i> Recursos administrativos</h3>
+            <h3><i class="fas fa-file-signature" aria-hidden="true"></i> Recursos administrativos</h3>
             <p>Protocolamos recursos em JARI, DETRAN e CETRAN com clareza e fundamentação jurídica.</p>
           </article>
           <article class="card fade-up">
-            <h3><i class="fas fa-gavel"></i> Recursos judiciais</h3>
+            <h3><i class="fas fa-gavel" aria-hidden="true"></i> Recursos judiciais</h3>
             <p>Oferecemos suporte jurídico completo quando os meios administrativos não forem suficientes.</p>
           </article>
           <article class="card fade-up">
-            <h3><i class="fas fa-user-shield"></i> Acompanhamento final</h3>
+            <h3><i class="fas fa-user-shield" aria-hidden="true"></i> Acompanhamento final</h3>
             <p>Monitoramos cada etapa do processo e mantemos você informado até a decisão definitiva.</p>
           </article>
         </div>
@@ -103,6 +105,7 @@
       </div>
     </section>
 
+    <!-- Como funciona -->
     <section class="section">
       <div class="container">
         <h1>Como funciona</h1>
@@ -110,27 +113,25 @@
 
         <div class="steps-illustrated">
           <div class="step">
-            <div class="step-icon"><i class="fas fa-bell"></i></div>
+            <div class="step-icon"><i class="fas fa-bell" aria-hidden="true"></i></div>
             <div class="step-number">1</div>
             <h3>Notificação</h3>
-            <p>Ao ser notificado de uma infração, iniciamos a análise do seu caso e dos prazos aplicáveis.
-            </p>
+            <p>Ao ser notificado de uma infração, iniciamos a análise do seu caso e dos prazos aplicáveis.</p>
           </div>
           <div class="step">
-            <div class="step-icon"><i class="fas fa-shield-alt"></i></div>
+            <div class="step-icon"><i class="fas fa-shield-alt" aria-hidden="true"></i></div>
             <div class="step-number">2</div>
             <h3>Defesa</h3>
-            <p>Coletamos informações e elaboramos a melhor defesa possível, com base na legislação vigente.
-            </p>
+            <p>Coletamos informações e elaboramos a melhor defesa possível, com base na legislação vigente.</p>
           </div>
           <div class="step">
-            <div class="step-icon"><i class="fas fa-file-alt"></i></div>
+            <div class="step-icon"><i class="fas fa-file-alt" aria-hidden="true"></i></div>
             <div class="step-number">3</div>
             <h3>Produção</h3>
             <p>Estruturamos toda a documentação, assinaturas e protocolos necessários para seu recurso.</p>
           </div>
           <div class="step">
-            <div class="step-icon"><i class="fas fa-search"></i></div>
+            <div class="step-icon"><i class="fas fa-search" aria-hidden="true"></i></div>
             <div class="step-number">4</div>
             <h3>Acompanhamento</h3>
             <p>Monitoramos o processo e mantemos você informado sobre cada avanço até a decisão final.</p>
@@ -143,67 +144,61 @@
       </div>
     </section>
 
-
-    <section class="section section-alt">
+    <!-- Estrutura Informativa — Trânsito -->
+    <section class="section section-alt informativo">
       <div class="container">
-        <h2>Sobre a FGA</h2>
+        <h2>Estrutura Informativa — Trânsito</h2>
+
+        <h3> Carteira Suspensa</h3>
         <p>
-          A FGA nasceu da percepção de que motoristas comuns enfrentam um sistema complexo de autuações.
-          Somos especialistas em Direito de Trânsito, com foco exclusivo em recursos administrativos e
-          judiciais,
-          atuando
-          em todo o território nacional.
+          A suspensão da Carteira Nacional de Habilitação (CNH) ocorre quando o condutor comete infrações que
+          acumulam pontos acima do limite permitido ou quando pratica uma infração específica que prevê essa penalidade.
+          Entre os principais motivos estão dirigir sob efeito de álcool, excesso de velocidade ou reincidência em
+          infrações graves. Durante o período de suspensão, o motorista fica impedido de dirigir e precisa cumprir o
+          prazo determinado pelo órgão de trânsito. Para recuperar a CNH, é obrigatório realizar curso de reciclagem e
+          ser aprovado em avaliação teórica, garantindo que o condutor esteja apto a voltar às vias com
+          responsabilidade.
         </p>
 
+        <h3> Carteira Cassada</h3>
         <p>
-          Diferente de escritórios genéricos, nos dedicamos à especificidade de cada infração — da
-          identificação
-          irregular
-          do veículo à ausência de sinalização adequada.
-          Nossa abordagem combina análise técnica da legislação (CTB, CPC, jurisprudência STJ/TJPR) com
-          estratégia
-          processual adequada às normas vigentes.
+          A cassação da CNH é uma penalidade mais severa do que a suspensão. Ela ocorre, por exemplo, quando o motorista
+          é flagrado dirigindo durante o período de suspensão ou quando há reincidência em determinadas infrações
+          gravíssimas. Diferente da suspensão, a cassação implica na perda definitiva da habilitação atual. O condutor
+          precisa aguardar o prazo estabelecido pela legislação e iniciar um novo processo de habilitação, como se fosse
+          tirar a carteira pela primeira vez. Isso inclui exames médicos, psicotécnicos, aulas teóricas e práticas, além
+          das provas correspondentes.
         </p>
 
-        <p>
-          Sabemos que uma multa pode gerar pontos, suspensão ou cassação da CNH. Por isso, oferecemos análise
-          técnica
-          cuidadosa e transparente sobre procedimentos, custos e prazos, sempre pautados pela ética e pelo
-          compromisso
-          com
-          a correta aplicação da lei.
-        </p>
-
-        <h3>Nosso Diferencial</h3>
+        <h3> Tipos Comuns de Multas</h3>
         <ul>
-          <li><strong>Especialização Exclusiva em Trânsito:</strong> foco único em recursos de multas e
-            infrações, com
+          <li>Leves, como estacionar em local proibido.</li>
+          <li>Médias, como dirigir sem o uso do cinto de segurança.</li>
+          <li>Graves, como avançar o sinal vermelho.</li>
+          <li>Gravíssimas, como dirigir sob efeito de álcool ou participar de rachas.</li>
+        </ul>
+        <p>
+          Cada categoria possui valores específicos e gera pontuação na CNH. O acúmulo desses pontos pode levar à
+          suspensão ou até à cassação da carteira, dependendo da reincidência e da gravidade das infrações cometidas.
+        </p>
+
+        <h3> Nosso Diferencial</h3>
+        <ul>
+          <li><strong>Especialização Exclusiva em Trânsito:</strong> foco único em recursos de multas e infrações, com
             análise detalhada conforme CTB e normas administrativas.</li>
-          <li><strong>Atendimento Técnico e Transparente:</strong> avaliação preliminar cuidadosa dos
-            procedimentos,
+          <li><strong>Atendimento Técnico e Transparente:</strong> avaliação preliminar cuidadosa dos procedimentos,
             custos e prazos, sempre pautada pela ética profissional.</li>
-          <li><strong>Experiência em Órgãos Competentes:</strong> atuação prática em JARI, DETRAN/PR, CETRAN e
-            Justiça
+          <li><strong>Experiência em Órgãos Competentes:</strong> atuação prática em JARI, DETRAN/PR, CETRAN e Justiça
             Comum.</li>
         </ul>
 
         <p>
-          Oferecemos avaliação preliminar dos casos, sem compromisso, para orientar sobre os procedimentos
-          possíveis.
+          Oferecemos avaliação preliminar dos casos, sem compromisso, para orientar sobre os procedimentos possíveis.
         </p>
       </div>
-
     </section>
 
-
-    <section class="section">
-      <div class="container">
-        <h2>Resultados</h2>
-        <p>Exemplo de sucesso: arquivamento de penalidade pelo DETRAN após defesa técnica elaborada pela FGA.</p>
-        <img src="img/" alt="Notificação de arquivamento" style="width:100%; border-radius:12px; margin-top:20px;">
-      </div>
-    </section>
-
+    <!-- CTA final -->
     <section class="section section-alt">
       <div class="container cta-center">
         <h2>Precisa de ajuda com sua CNH?</h2>
@@ -213,10 +208,11 @@
     </section>
   </main>
 
+  <!-- Rodapé -->
   <footer class="site-footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <a class="logo" href="index.html">
+        <a class="logo" href="index.html" aria-label="Ir para a página inicial">
           <img src="img/fga.png" alt="FGA - Assessoria de Trânsito" />
           <span class="logo-text">FGA - Assessoria de Trânsito</span>
         </a>
