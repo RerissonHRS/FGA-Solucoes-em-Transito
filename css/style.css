@@ -60,7 +60,7 @@ body {
 
   /* ⭐️ CORREÇÃO: Usar apenas a altura do header principal (Faixa de Contato + Inner Header). 
         Altura total aproximada: 40px + 80px = 120px */
-  padding-top: 160px;
+  padding-top: 90px;
 }
 
 /* CÁLCULO DESKTOP: 
@@ -1118,7 +1118,7 @@ ul {
 
   /* ⭐️ CORREÇÃO NO MOBILE: Apenas a altura do header principal sem o vídeo. */
   body {
-    padding-top: 250px;
+    padding-top: 140px;
   }
 
   /* ----------------------------------------------------------------- */
