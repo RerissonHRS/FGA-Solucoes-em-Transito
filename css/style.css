@@ -1256,3 +1256,99 @@ ul {
     transform: translateY(0);
   }
 }
+
+/* Grid de cards informativos (mesmo padrão dos cards "Como funciona") */
+.informativo .informativo-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  align-items: stretch;
+}
+
+/* Card informativo: mesma base visual dos cards de "Como funciona" */
+.informativo-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  height: 100%;
+  background: var(--paper, #fff);
+  border: 1px solid var(--border, #e6e0d6);
+  border-left: 5px solid var(--accent, #2B4B6F);
+  border-radius: 10px;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: left;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+/* Cabeçalho do card: ícone + título alinhados como nos steps */
+.card-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 12px;
+}
+
+/* Ícone do card: mesmo tamanho e estilo dos ícones dos steps */
+.card-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(43, 75, 111, 0.06);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 44px;
+}
+
+.card-icon i {
+  color: var(--text, #333333);
+  font-size: 18px;
+  line-height: 1;
+}
+
+/* Título do card: mesma tipografia e peso */
+.informativo-card h3 {
+  margin: 0;
+  font-family: "Merriweather", Georgia, serif;
+  color: var(--accent, #2B4B6F);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* Conteúdo do card ocupa espaço para igualar alturas */
+.informativo-card p {
+  margin: 0;
+  color: var(--muted, #374151);
+  line-height: 1.5;
+  font-size: 15px;
+  flex: 1 1 auto;
+}
+
+/* Lista dentro do card */
+.informativo-card ul {
+  margin: 0 0 8px 18px;
+  padding: 0;
+  color: var(--muted, #374151);
+}
+
+/* Hover sutil (mesmo efeito dos outros cards) */
+.informativo-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.06);
+}
+
+/* Nota final da seção */
+.informativo-note {
+  margin-top: 20px;
+  color: var(--muted, #374151);
+  font-size: 15px;
+}
+
+/* Responsivo: 1 coluna em telas pequenas */
+@media (max-width: 560px) {
+  .informativo .informativo-cards {
+    grid-template-columns: 1fr;
+  }
+}
