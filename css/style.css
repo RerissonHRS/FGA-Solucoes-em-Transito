@@ -577,7 +577,8 @@ ul {
   flex-direction: column;
   /* empilha conteúdo verticalmente */
   justify-content: flex-start;
-  align-items: stretch;
+  align-items: center;
+  /* centraliza ícone e texto */
   height: 100%;
   /* ocupa toda a altura da célula do grid */
   background: var(--white);
@@ -597,33 +598,53 @@ ul {
   box-shadow: 0 10px 22px rgba(0, 0, 0, 0.10);
 }
 
-/* Título e ícone */
+/* Título e ícone: ícone acima do texto, centralizados */
 .card h3 {
   color: var(--primary, #0B1C2D);
   font-weight: 700;
   font-size: 18px;
   margin: 0 0 12px 0;
   display: flex;
+  flex-direction: column;
+  /* ícone em cima do título */
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: 12px;
+  width: 100%;
 }
 
-/* Ícone inline no título */
+/* Ícone dentro do título: círculo consistente e alinhado */
+/* Mantive a cor original como fallback e adicionei --icon-color para controle */
 .card h3 i {
-  color: var(--primary, #0B1C2D);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  /* ajuste o tamanho conforme necessário */
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(43, 75, 111, 0.06);
+  /* leve fundo circular */
+  color: var(--icon-color, var(--primary, #0B1C2D));
+  /* cor do ícone */
   font-size: 20px;
   line-height: 1;
 }
 
-/* Texto do card ocupa o espaço disponível */
+/* Texto do card ocupa o espaço disponível e fica alinhado */
 .card p {
   font-size: 15px;
   color: #374151;
   line-height: 1.5;
   margin: 0;
   flex: 1 1 auto;
-  /* faz o parágrafo crescer para igualar alturas */
+  display: flex;
+  align-items: center;
+  /* centraliza verticalmente quando o texto for curto */
+  justify-content: center;
+  /* centraliza horizontalmente */
+  text-align: center;
+  padding-top: 6px;
 }
 
 /* Se houver CTA no final do card */
@@ -631,6 +652,18 @@ ul {
   margin-top: 16px;
   align-self: center;
   /* ou stretch para ocupar toda a largura */
+}
+
+/* Caso queira ícones menores em títulos longos, ajuste aqui */
+.card h3.small-icon i {
+  width: 48px;
+  height: 48px;
+  font-size: 18px;
+}
+
+/* Garantir que h3 com ícone inline antigo também fique alinhado (fallback) */
+.card h3 i.fas {
+  vertical-align: middle;
 }
 
 /* Responsivo: uma coluna em telas pequenas */
@@ -643,8 +676,13 @@ ul {
   .step {
     padding: 16px;
   }
-}
 
+  .card h3 i {
+    width: 48px;
+    height: 48px;
+    font-size: 18px;
+  }
+}
 
 /* Steps */
 .steps-illustrated {
