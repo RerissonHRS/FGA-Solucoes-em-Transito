@@ -141,7 +141,7 @@ padding-top: calc(80px + 40vh);
   justify-content: space-between;
   align-items: center;
   padding: 12px 20px;
-  gap: 24px;
+  gap: 150px;
 }
 
 .header-left {
@@ -165,7 +165,7 @@ padding-top: calc(80px + 40vh);
 }
 
 .logo img {
-  height: 48px;
+  height: 55px;
   width: auto;
   transition: transform 0.3s ease;
 }
@@ -794,7 +794,7 @@ ul {
 /* Use o seletor que corresponde ao seu HTML (você usa h6) */
 .strip-overlay .Inter h6,
 .strip-overlay h6 {
-  font-size: 22px;
+  font-size: 25px;
   line-height: 1.25;
   color: #ffffff;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
