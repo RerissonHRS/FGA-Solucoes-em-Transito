@@ -706,19 +706,18 @@ ul {
 }
 
 .step-number {
-  width: 44px;
-  height: 44px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  background: var(--accent, #333333);
-  color: var(--white, #fff);
-  font-weight: bold;
-  font-size: 18px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 12px;
+  background: var(--text, #333333);
+  color: var(--white, #FFFFFF);
+  font-weight: 700;
+  font-size: 18px;
+  margin: 0 auto 16px auto;
 }
-
 
 .step h3 {
   font-size: 20px;
