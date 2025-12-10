@@ -562,7 +562,7 @@ ul {
 /* Card e step: layout e aparência */
 .card,
 .step {
-  display: flex;
+  display: center;
   /* torna o card um flex container */
   flex-direction: column;
   /* empilha conteúdo verticalmente */
