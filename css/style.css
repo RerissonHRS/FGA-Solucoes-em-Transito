@@ -236,7 +236,8 @@ padding-top: calc(80px + 40vh);
 }
 
 .footer-links {
-  text-align: center; /* garante centralização */
+  text-align: center;
+  /* garante centralização */
   margin-top: 16px;
 }
 
@@ -286,11 +287,16 @@ padding-top: calc(80px + 40vh);
 /* Responsivo para telas pequenas */
 @media (max-width: 540px) {
   .footer-links .btn {
-    display: block;       /* vira bloco */
-    width: 100%;          /* ocupa toda a largura */
-    font-size: 16px;      /* aumenta um pouco a legibilidade */
-    padding: 12px;        /* mais espaço para toque */
-    margin: 0 auto;       /* centraliza */
+    display: block;
+    /* vira bloco */
+    width: 100%;
+    /* ocupa toda a largura */
+    font-size: 16px;
+    /* aumenta um pouco a legibilidade */
+    padding: 12px;
+    /* mais espaço para toque */
+    margin: 0 auto;
+    /* centraliza */
   }
 }
 
@@ -1369,9 +1375,13 @@ ul {
 
 /* Nota final da seção */
 .informativo-note {
-  margin-top: 20px;
-  color: var(--muted, #374151);
-  font-size: 15px;
+  text-align: center;
+  margin-top: 16px;
+  /* opcional: dá um respiro em relação ao conteúdo acima */
+  font-style: italic;
+  /* opcional: deixa o texto diferenciado */
+  color: #374151;
+  /* opcional: ajusta a cor */
 }
 
 /* Responsivo: 1 coluna em telas pequenas */
