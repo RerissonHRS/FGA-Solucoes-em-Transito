@@ -1393,3 +1393,25 @@ ul {
     grid-template-columns: 1fr;
   }
 }
+
+.whatsapp-fixo {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  /* tamanho fixo */
+  height: 60px;
+  border-radius: 50%;
+  /* garante círculo */
+  overflow: hidden;
+  /* corta bordas extras */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+
+.whatsapp-fixo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* mantém proporção */
+}
